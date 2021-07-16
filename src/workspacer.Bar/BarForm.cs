@@ -13,7 +13,6 @@ namespace workspacer.Bar
         private IMonitor _monitor;
         private BarPluginConfig _config;
         private System.Timers.Timer _timer;
-
         private FlowLayoutPanel leftPanel;
         private FlowLayoutPanel rightPanel;
 
@@ -26,11 +25,10 @@ namespace workspacer.Bar
             _config = config;
             _timer = new System.Timers.Timer(50);
             _timer.Elapsed += Redraw;
-
+            
             this.Text = config.BarTitle;
             this.ControlBox = false;
             this.FormBorderStyle = FormBorderStyle.None;
-
             this.BackColor = ColorToColor(config.DefaultWidgetBackground);
 
             this.Load += OnLoad;
@@ -51,7 +49,7 @@ namespace workspacer.Bar
 
         public void Initialize(IBarWidget[] left, IBarWidget[] right, IConfigContext context)
         {
-            _left = new BarSection(false, leftPanel, left, _monitor, context, 
+            _left = new BarSection(false, leftPanel, left, _monitor, context,
                 _config.DefaultWidgetForeground, _config.DefaultWidgetBackground, _config.FontName, _config.FontSize);
             _right = new BarSection(true, rightPanel, right, _monitor, context,
                 _config.DefaultWidgetForeground, _config.DefaultWidgetBackground, _config.FontName, _config.FontSize);
@@ -66,11 +64,18 @@ namespace workspacer.Bar
         {
             this.Height = _config.BarHeight;
             var titleBarHeight = this.ClientRectangle.Height - this.Height;
-            this.Location = new Point(_monitor.X, _monitor.Y - titleBarHeight);
+           
+            if (_config.BarIsTop)
+                this.Location = new Point(_monitor.X, _monitor.Y - titleBarHeight);
+            else
+
+                this.Location = new Point(_monitor.X, _monitor.Y + _monitor.Height - _config.BarHeight);
+
             _timer.Enabled = true;
 
             this.Height = _config.BarHeight;
-            this.Width = _monitor.Width;
+            this.Width = _config.BarIsMinimal ? _left.WidthInPixels + _right.WidthInPixels : _monitor.Width;
+
         }
 
         private void InitializeComponent()
