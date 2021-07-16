@@ -2,7 +2,7 @@ baseurl = "/"
 relativeURLs = true
 languageCode = "en-us"
 title = "workspacer"
-theme = "kube"
+theme = "workspacer"
 publishDir = "../out/docs/"
 
 [params]
@@ -37,3 +37,20 @@ publishDir = "../out/docs/"
 [[menu.extra]]
     name = "submit an issue"
     url = "https://github.com/workspacer/workspacer/issues/new"
+
+[[menu.footer]]
+    name = "Workspacer"
+    url = "https://github.com/workspacer/workspacer"
+    weight = 1
+    
+[[menu.footer]]
+    name = "Rick Button"
+    url = "https://github.com/rickbutton"
+    weight = 2
+    
+    
+[[menu.footer]]
+    name = "Website"
+    url = "https://rickbutton.me"
+    weight = 3
+

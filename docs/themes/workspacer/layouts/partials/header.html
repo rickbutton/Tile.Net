@@ -1,0 +1,34 @@
+<header>
+	<a href="/" title="Home" class="logo">
+		{{ partial "icons/logo.svg" . }}
+	</a>
+	<nav class="nav-dekstop nav-main">
+		{{ $currentPage := . }}
+		{{ range .Site.Menus.main }}
+			{{ $active := or (eq $.URL .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
+			<a href="{{ .URL }}">{{ .Name }}</a>
+		{{end}}
+	</nav>
+	<nav class="nav-dekstop nav-extra">
+		{{ $currentPage := . }}
+		{{ range .Site.Menus.extra }}
+			{{ $active := or (eq $.URL .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
+			<a href="{{ .URL }}" class="btn btn-small btn-light">{{ .Name }}</a>
+		{{end}}
+	</nav>
+	<button class="nav-phone-toggle btn btn-light">{{ partial "icons/menu.svg" . }}</button>
+	<nav class="nav-phone hide-dekstop">
+		{{ partial "window-decorations" . }}
+		{{ $currentPage := . }}
+		{{ range .Site.Menus.main }}
+			{{ $active := or (eq $.URL .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
+			<a href="{{ .URL }}" class="btn btn-small btn-light">{{ .Name }}</a>
+		{{end}}
+		<div class="extra-separator"></div>
+		{{ $currentPage := . }}
+		{{ range .Site.Menus.extra }}
+			{{ $active := or (eq $.URL .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
+			<a href="{{ .URL }}" class="btn btn-small">{{ .Name }}</a>
+		{{end}}
+	</nav>
+</header>

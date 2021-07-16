@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="/css/variables.css">
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="/css/helpers.css">
+        <link rel="stylesheet" type="text/css" href="/css/components.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        {{ block "custom-styles" . }}{{ end }}
+            
+        {{ $title := print .Site.Title " | " .Title }}
+        
+        {{ with .Site.Params.Description }}
+        <meta name="description" content="{{ . }}"> {{ end }}
+        
+        {{ partial "meta/name-author" . }}
+        {{ partial "meta/ogimage" . }}
+            
+        {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+        <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+        <script src="/js/app.js" defer></script>
+    </head>
+
+    <body onload="applyTheme()">
+        {{- block "header" . }}
+            {{- partial "header.html" . -}}
+        {{- end }}
+        <main>
+            {{- block "main" . }}{{- end }}
+        </main>
+        {{- block "footer" . }}
+            {{- partial "footer.html" . -}}
+        {{- end }}
+    </body>
+</html>

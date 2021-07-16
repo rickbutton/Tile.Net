@@ -1,0 +1,22 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+    <section id="hero" class="window">
+			{{ partial "window-decorations" . }}
+      <h1> {{ .Title}} </h1>
+      <p class="hero-lead">
+				{{ .Params.description }}
+      </p>
+    </section> 
+		
+    <div class="content window">
+			<!-- { partial "toc" .} -->
+		{{ partial "window-decorations" . }}
+
+    {{ .Content}}
+    {{if .Params.script}}
+     {{ $script := (delimit (slice "scripts" .Params.script) "/")}}
+    {{ partial (string $script) .}}
+    {{end }}
+    </div>
+{{ end }}

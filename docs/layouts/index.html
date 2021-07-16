@@ -1,0 +1,66 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "custom-styles" }}
+	<link rel="stylesheet" href="/css/pages/home.css">
+{{ end }}
+
+{{ define "main"}}
+<div class="windows-grid">
+	<section class="window hero">
+		<div class="title">
+				{{ partial "window-decorations" }}
+			<h1>
+				<span class="serif bold">W</span>orkspacer
+			</h1>
+			<h2>{{ .Site.Params.Description }}</h2>
+		</div>
+		<div class="action-buttons">
+			<a class="btn primary" href="https://github.com/workspacer/workspacer/releases/latest" onclick="gtag('event', 'workspacer', 'download-cta')">Download</a> 
+			<a class="btn" href="https://github.com/workspacer/workspacer" onclick="gtag('event', 'workspacer', 'github-cta')">View on Github</a>
+			<small>portable zip file | msi installer - workspacer automatically checks for updates</small>
+		</div>
+	</section>
+
+
+	<section class="window features">
+		{{ partial "window-decorations" }}
+		<div class="feature">
+			<div class="feature-title">
+				<div class="feature-icon">
+					{{partial "icons/settings.svg"}}
+				</div>
+				<h3>Configurable</h3>
+			</div>
+			<p>configured entirely with C#; you can customize every piece, and change any behavior!</p>
+		</div>
+		<div class="feature">
+			<div class="feature-title">
+				<div class="feature-icon">
+					{{partial "icons/clock.svg"}}
+				</div>
+				<h3>fast</h3>
+			</div>
+			<p>manipulates windows instantly, and doesn't add any significant overhead to Windows</p>
+			</div>
+			<div class="feature">
+				<div class="feature-title">
+					<div class="feature-icon">
+						{{partial "icons/clock.svg"}}
+					</div>
+					<h3>Compatible</h3>
+				</div>
+				<p>doesn't use DLL injection to manipulate windows, so it less likely to break things!</p>
+		</div>
+	</section>
+
+	<section class="window compatibility">
+		{{ partial "window-decorations" }}
+		<h2>is this ready for use yet?</h2>
+		<p>
+      kinda! there are likely some major bugs in workspacer that I have not fixed yet, 
+      but it is more or less functionally complete. i am using workspacer 24/7 at home and at 
+      work at the moment, so it suites my needs (aside from the occasional hickup or crash). 
+      if you run into any problems, please open an issue!
+    </p>
+	</section>
+	</div>
+{{ end }}

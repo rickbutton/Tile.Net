@@ -1,0 +1,32 @@
+main {
+	min-height: 82vh;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+}
+
+.error-404.window {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--primary-light);
+
+	padding: 5vh 2rem;
+}
+
+h1 {
+	margin-bottom: 0rem;
+	
+	font-family: var(--serif);
+	font-weight: 900;
+	font-size: 7em;
+
+	color: var(--yellow);
+}
+h2 {
+	margin-top: 0;
+	margin-bottom: 10vh;
+
+	color: var(--primary-lighter);
+}

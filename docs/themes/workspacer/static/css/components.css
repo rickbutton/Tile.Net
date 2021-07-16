@@ -1,0 +1,73 @@
+.btn {
+	display: inline-block;
+	padding: clamp(1px, 1vmax, 1rem) clamp(2px, 2vmax, 2rem);
+	
+	color: var(--title);
+	background-color: transparent;
+	border: 2px var(--title) solid;
+	border-radius: 5px;
+	cursor: pointer;
+
+	font-size: clamp(0.5rem, 2vmax, 1rem);
+	font-family: inherit;
+	font-weight: 500;
+	text-decoration: none;
+	white-space: pre;
+	
+	transition: color 100ms ease-in-out, background-color 100ms ease-in-out, border-color 100ms ease-in-out;
+}
+.btn:hover {
+	border-color: var(--primary-darker);
+	color: var(--primary-darker);
+}
+.btn.primary {
+	background-color: var(--title);
+	color: var(--grey-lighter);
+}
+.btn.primary:hover {
+	border-color: var(--title);
+	color: var(--primary-light);
+}
+.btn-light {
+	color: var(--grey);
+	border-color: var(--grey-lighter);
+	font-weight: 400;
+}
+.btn-light:hover {
+	color: var(--title);
+	border-color: var(--title-lighter);
+}
+.btn-small {
+	padding: clamp(1px, 0.5vmax, 0.5rem) clamp(2px, 1vmax, 1rem);
+}
+
+/* Window Components */
+.window {
+	position: relative;
+	padding: 2rem;
+	background-color: #eee;
+	border-radius: 1rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.window-decorations {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: auto;
+	padding: 0.5rem 1rem;
+	
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-end;
+}
+
+.decorator-circle {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	margin: 0.1rem;
+	border-radius: 100%;
+	background-color: var(--primary-lighter);
+	opacity: 50%;
+}

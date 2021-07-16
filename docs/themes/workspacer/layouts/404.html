@@ -1,0 +1,14 @@
+{{ define "title" }}404 - Page not found{{ end }}
+{{ define "custom-styles" }} <link rel="stylesheet" href="/css/pages/404.css"> {{ end }}
+
+{{ define "main" }}
+	<div class="error-404 window">
+		{{ partial "window-decorations" . }}
+		<h1>404</h1>
+		<h2>Page not found.</h2>
+		<div class="action-buttons">
+			<a href="/" class="btn primary">Home Page</a>
+			<a href="https://github.com/workspacer/workspacer/issues/new" class="btn btn-primary">Report an issue</a>
+		</div>
+	</div>
+{{ end }}

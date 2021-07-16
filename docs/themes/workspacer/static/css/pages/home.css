@@ -1,0 +1,201 @@
+*, *::before, *::after { 
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	min-height: 100%;
+	max-width: 2000px;
+	margin: auto;
+}
+
+.windows-grid {
+	width: 100%;
+	min-height: 80vh;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: "hero features"
+											"hero compatibility";
+	grid-gap: 1rem;
+}
+
+section.hero {
+	min-height: 50vh;
+	padding: 0 7vmin;
+	padding-top: 15vmin;
+
+	grid-area: hero;
+
+	background-color: var(--primary-light);
+}
+section.hero h1 {
+	color: var(--yellow);
+	font-family: var(--sans-serif);
+	font-size: clamp(2rem, 8vmax, 6rem);
+}
+section.hero h1 span {
+	margin-right: calc(clamp(1px, 0.5vmin, 30px) * -1);
+}
+section.hero h2 {
+	font-weight: 400;
+	color: var(--primary-dark);
+	font-family: var(--sans-serif);
+	font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+section.hero .action-buttons {
+	width: fit-content;
+	margin-top: 5rem;
+}
+section.hero .action-buttons small {
+	color: var(--grey-dark);
+	font-size: clamp(0.8rem, 1vw, 0.9rem);
+	width: 70%;
+	margin-top: 0.5rem;
+	display: block;
+}
+
+section.features {
+	grid-area: features;
+	height: 100%;
+	min-height: 30vh;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, clamp(3rem, 20vw, 15rem));
+	grid-gap: 1rem;
+	align-content: space-around;
+	justify-content: space-around;
+	padding: 2rem clamp(1rem, 3vw, 5rem);
+
+	background-color: var(--secondary-light);
+	color: var(--grey-light);
+}
+section.features .feature-title {
+	width: min-content;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+	color: var(--title);
+}
+section.features .feature-icon {
+	width: 2rem;
+	min-width: 2rem;
+	height: auto;
+	margin-right: 0.5rem;
+}
+section.features h3 {
+	color: inherit;
+	font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+section.features p {
+	font-size: clamp(0.8rem, 2vw, 1rem);
+}
+section.features .feature {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+section.compatibility {
+	background: var(--bg);
+	grid-area: compatibility;
+	padding-top: 10vmin;
+}
+section.compatibility h2 {
+	font-size: 2em;
+}
+section.compatibility p {
+	font-weight: 300;
+	font-size: 1.2em;
+}
+
+@media only screen and (max-width: 1000px) {
+	main {
+		padding: 0.5rem;
+	}
+	
+	.windows-grid {
+		display: flex;
+		flex-direction: column;
+		grid-gap: 1rem;
+	}
+	section.hero .feature-title {
+		flex-direction: column;
+	}
+
+	section.compatibility {
+		padding-top: 4vh;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	main {
+		padding: 0rem;
+	}
+
+	.windows-grid {
+		grid-gap: 0rem;
+	}
+
+	.window {
+		border-radius: 0;
+	}
+
+	section.hero {
+		min-height: 60vh;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		background-color: var(--primary-lighter);
+	}
+	section.hero h1 {
+		color: var(--primary-darker);
+	}
+	section.hero .action-buttons {
+		max-width: 200px;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	section.hero .action-buttons .btn, section.hero .action-buttons small {
+		width: 100%;
+		margin-bottom: 0.25rem;
+	}
+	
+	section.features {
+		min-height: unset;
+		grid-template-columns: 1fr;
+		grid-gap: 3rem;
+		align-items: center;
+		text-align: center;
+		padding: 5vh 20vmin;
+
+		background-color: var(--bg);
+	}
+	section.features .feature {
+		align-items: center;
+	}
+	section.features .feature-title {
+		flex-direction: column;
+		margin-bottom: 0.5rem;
+		color: var(--title);
+	}
+	section.features h3 {
+		font-weight: 800;
+		font-size: 1.5rem;
+		color: var(--grey-light);
+	}
+	section.features .feature-icon {
+		width: 3rem;
+		margin-right: 0;
+	}
+
+	section.compatibility {
+		background-color: var(--grey-lighter);
+		box-shadow: none;
+		padding: 5vh 20vmin;
+	}
+}

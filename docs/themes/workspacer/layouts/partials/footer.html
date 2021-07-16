@@ -1,0 +1,8 @@
+<footer>
+	<p>&copy; Licence MIT.</p>
+	<nav class="nav-footer">
+		{{ range .Site.Menus.footer }}
+			<a href="{{ .URL }}">{{ .Name }}</a>
+		{{ end }}
+	</nav>
+</footer>

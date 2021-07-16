@@ -1,0 +1,6 @@
+.serif {
+	font-family: var(--serif);
+}
+.bold {
+	font-weight: 800;
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1536"
+   height="512"
+   viewBox="0 0 406.39998 135.46666"
+   version="1.1"
+   id="svg960"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="decorator.svg"
+   inkscape:export-filename="D:\code\rickbutton\workspacer\images\logo-128x128.png"
+   inkscape:export-xdpi="6.1439996"
+   inkscape:export-ydpi="6.1439996">
+  <defs
+     id="defs954" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.45570801"
+     inkscape:cx="1151.116"
+     inkscape:cy="275.60866"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="2382"
+     inkscape:window-height="1303"
+     inkscape:window-x="2400"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true" />
+  <metadata
+     id="metadata957">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect934"
+       style="fill:none;fill-opacity:1;stroke:#20283c;stroke-width:48.8491;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 211.80791,859.02123 c -9.72328,0 -17.55103,9.38496 -17.55103,21.04255 v 411.77402 c 0,11.6576 7.82775,21.0425 17.55103,21.0425 H 383.53276 V 1048.8007 859.02123 Z"
+       sodipodi:nodetypes="sssscccs" />
+    <path
+       id="rect845-0"
+       style="fill:none;fill-opacity:1;stroke:#468880;stroke-width:47.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 458.22814,1096.5342 v 214.3125 h 172.83545 c 9.78618,0 17.66456,-7.6164 17.66456,-17.077 v -197.2355 z" />
+    <path
+       id="path870"
+       style="fill:none;fill-opacity:1;stroke:#467188;stroke-width:47.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="M 458.22814,858.40917 V 1025.0967 H 648.72815 V 876.89131 c 0,-10.23911 -7.87831,-18.48214 -17.66455,-18.48214 z" />
+    <rect
+       style="font-variation-settings:'wght' 800;opacity:1;fill:#20283c;fill-opacity:1;stroke:none;stroke-width:5.55653;stroke-linecap:round;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       id="rect833"
+       width="135.46666"
+       height="135.46666"
+       x="0"
+       y="-7.4462887e-06" />
+    <rect
+       style="font-variation-settings:'wght' 800;opacity:1;fill:#467188;fill-opacity:1;stroke:none;stroke-width:5.55653;stroke-linecap:round;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       id="rect835"
+       width="135.46666"
+       height="135.46667"
+       x="135.46666"
+       y="-1.5258789e-05" />
+    <rect
+       style="font-variation-settings:'wght' 800;opacity:1;fill:#468880;fill-opacity:1;stroke:none;stroke-width:5.55653;stroke-linecap:round;stroke-linejoin:bevel;paint-order:stroke fill markers"
+       id="rect837"
+       width="135.46666"
+       height="135.46667"
+       x="270.93332"
+       y="-1.5258789e-05" />
+  </g>
+</svg>
