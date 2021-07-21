@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -32,6 +32,7 @@ namespace workspacer
             IgnoreProcessName("StartMenuExperienceHost");
             IgnoreProcessName("SearchApp");
             IgnoreProcessName("SearchHost"); // Windows 11 search
+            IgnoreWindowClass("Shell_TrayWnd"); // Windows 11 start
             IgnoreProcessName("ScreenClippingHost");
             _filters.Add((window) => !(window.ProcessId == Process.GetCurrentProcess().Id));
         }

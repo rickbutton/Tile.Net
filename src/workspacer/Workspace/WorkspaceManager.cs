@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -346,7 +346,7 @@ namespace workspacer
 
         public void AddWindow(IWindow window, bool firstCreate)
         {
-            AddWindow(window, true, firstCreate);
+            AddWindow(window, false, firstCreate);
         }
 
         private void AddWindow(IWindow window, bool switchToWorkspace, bool firstCreate)
